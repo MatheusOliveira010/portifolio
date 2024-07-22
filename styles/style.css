@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&&display=swap'); /*Importando uma fonte do Google Fonts*/
+
+:root { /*Criando variaveis*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0; /*Alterar a margem*/
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria); /*Alterar a cor do fundo*/
+    color: var(--cor-secundaria); /*Alterar a cor da fonte*/
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; /*Padding - Limita as bordas (Superior/Direito/Inferior/Esquerdo)*/
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none; /*Tirar o sublinhado do link*/
+}
+
+.apresentacao {
+    padding: 5% 15%; /*Alterar a margem*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%; /*Largura*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /*Alterar o tamanho da fonte*/
+    font-family: var(--fonte-primaria); /*Para usar a fonte que foi importada*/
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria); /*Alterar a cor da fonte*/
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem; /*Alterar a fonte*/
+    font-family: var(--fonte-secundaria); /*Para usar a fonte que foi importada*/
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%; /*Largura*/
+    text-align: center; /*Centralizar o texto*/
+    border-radius: 8px; /*Arredondademnto da borda*/
+    font-size: 1.5rem; /*Alterar o tamanho da fonte*/
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none; /*Tirando a decoração do link*/
+    color: var(--cor-secundaria); /*Alterar a cor da fonte*/
+    font-family: var(--fonte-secundaria); /*Para usar a fonte que foi importada*/
+}
+
+.apresentacao__links__link:hover { /*(:Hover) - Selecione e estilize um link ao passar o mouse sobre ele*/
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) { /* @media (condição) Se isso, Faça isso*/
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
